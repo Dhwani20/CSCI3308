@@ -1,0 +1,14 @@
+te
+
+ls -ltr r 	= reversed time
+ls -lt    	= most current time
+
+cd ..     	= reverse directory
+pwd	  	= list current directory
+who	  	= who is using computer at what time
+whoami	  	= current login name
+man man   	= manual access
+env	  	= current environment
+mk dir	  	= make directory
+touch abc.txt 	= make new file abc
+

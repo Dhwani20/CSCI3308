@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="C:/Users/Emily/Desktop/SimSEDemo/SimSExp.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/xpGame/xpGameJar.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" mainClassHandleIdentifier="=xpGame/&lt;simse{SimSE.java[SimSE" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="false" exportJavaFiles="true" exportOutputFolder="true">
+        <javaElement handleIdentifier="=xpGame/&lt;simse.explanatorytool"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.gui"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.gui.images"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.adts.actions"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.state.logger"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.util"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.state"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.logic"/>
+        <javaElement handleIdentifier="=xpGame/&lt;com"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.logic.dialogs"/>
+        <javaElement handleIdentifier="=xpGame/&lt;lib"/>
+        <javaElement handleIdentifier="=xpGame/&lt;org"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.gui.images.table"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.gui.images.layout"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.gui.icons"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.adts.objects"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.engine"/>
+        <javaElement handleIdentifier="=xpGame/&lt;simse.gui.images.wall"/>
+    </selectedElements>
+</jardesc>

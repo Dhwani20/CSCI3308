@@ -1,0 +1,133 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  Internal Error (4A4E490E4350500346), pid=59100, tid=58844
+#
+# Java VM: Java HotSpot(TM) Client VM (1.6.0-b105 mixed mode)
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0b756000):  JavaThread "Java2D Disposer" daemon [_thread_in_vm, id=58844]
+
+Stack: [0x0b980000,0x0b9d0000)
+[error occurred during error reporting, step 110, id 0xc0000005]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.awt.Cursor.finalizeImpl(J)V+0
+j  java.awt.Cursor.access$000(J)V+1
+j  java.awt.Cursor$CursorDisposer.dispose()V+4
+j  sun.java2d.Disposer.run()V+26
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0b6f7800 JavaThread "Thread-1" daemon [_thread_in_native, id=61156]
+  0x00b67000 JavaThread "DestroyJavaVM" [_thread_blocked, id=58880]
+  0x0c3d1800 JavaThread "TimerQueue" daemon [_thread_blocked, id=54264]
+  0x0b7c7400 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=58612]
+  0x0b756400 JavaThread "AWT-Shutdown" [_thread_blocked, id=58896]
+=>0x0b756000 JavaThread "Java2D Disposer" daemon [_thread_in_vm, id=58844]
+  0x01443800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=58328]
+  0x01441c00 JavaThread "CompilerThread0" daemon [_thread_blocked, id=57772]
+  0x01441400 JavaThread "Attach Listener" daemon [_thread_blocked, id=59016]
+  0x01441000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=58988]
+  0x01433400 JavaThread "Finalizer" daemon [_thread_blocked, id=58984]
+  0x01427400 JavaThread "Reference Handler" daemon [_thread_blocked, id=58892]
+
+Other Threads:
+  0x01424400 VMThread [id=58968]
+  0x01470c00 WatcherThread [id=57528]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 1152K, used 72K [0x034a0000, 0x035e0000, 0x03980000)
+  eden space 1024K,   0% used [0x034a0000, 0x034a0818, 0x035a0000)
+  from space 128K,  55% used [0x035a0000, 0x035b19d0, 0x035c0000)
+  to   space 128K,   0% used [0x035c0000, 0x035c0000, 0x035e0000)
+ tenured generation   total 14808K, used 11305K [0x03980000, 0x047f6000, 0x074a0000)
+   the space 14808K,  76% used [0x03980000, 0x0448a718, 0x0448a800, 0x047f6000)
+ compacting perm gen  total 12288K, used 10218K [0x074a0000, 0x080a0000, 0x0b4a0000)
+   the space 12288K,  83% used [0x074a0000, 0x07e9ab78, 0x07e9ac00, 0x080a0000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x00423000 	C:\Program Files\Java\jre1.6.0\bin\javaw.exe
+0x77d00000 - 0x77e1e000 	C:\Windows\system32\ntdll.dll
+0x775e0000 - 0x776b8000 	C:\Windows\system32\kernel32.dll
+0x774f0000 - 0x775af000 	C:\Windows\system32\ADVAPI32.dll
+0x77aa0000 - 0x77b63000 	C:\Windows\system32\RPCRT4.dll
+0x77770000 - 0x7780e000 	C:\Windows\system32\USER32.dll
+0x769d0000 - 0x76a1b000 	C:\Windows\system32\GDI32.dll
+0x767a0000 - 0x767be000 	C:\Windows\system32\IMM32.DLL
+0x77810000 - 0x778d7000 	C:\Windows\system32\MSCTF.dll
+0x776c0000 - 0x7776a000 	C:\Windows\system32\msvcrt.dll
+0x77e30000 - 0x77e39000 	C:\Windows\system32\LPK.DLL
+0x765c0000 - 0x7663d000 	C:\Windows\system32\USP10.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jre1.6.0\bin\msvcr71.dll
+0x6d7c0000 - 0x6da07000 	C:\Program Files\Java\jre1.6.0\bin\client\jvm.dll
+0x74ed0000 - 0x74f03000 	C:\Windows\system32\WINMM.dll
+0x76640000 - 0x76784000 	C:\Windows\system32\ole32.dll
+0x778e0000 - 0x7796c000 	C:\Windows\system32\OLEAUT32.dll
+0x74d80000 - 0x74db8000 	C:\Windows\system32\OLEACC.dll
+0x763f0000 - 0x7641c000 	C:\Windows\system32\apphelp.dll
+0x6d310000 - 0x6d318000 	C:\Program Files\Java\jre1.6.0\bin\hpi.dll
+0x76520000 - 0x76527000 	C:\Windows\system32\PSAPI.DLL
+0x6d770000 - 0x6d77c000 	C:\Program Files\Java\jre1.6.0\bin\verify.dll
+0x6d3b0000 - 0x6d3cf000 	C:\Program Files\Java\jre1.6.0\bin\java.dll
+0x6d7b0000 - 0x6d7bf000 	C:\Program Files\Java\jre1.6.0\bin\zip.dll
+0x6d000000 - 0x6d1c3000 	C:\Program Files\Java\jre1.6.0\bin\awt.dll
+0x72a40000 - 0x72a81000 	C:\Windows\system32\WINSPOOL.DRV
+0x74ff0000 - 0x7502f000 	C:\Windows\system32\uxtheme.dll
+0x6d2b0000 - 0x6d303000 	C:\Program Files\Java\jre1.6.0\bin\fontmanager.dll
+0x76a20000 - 0x774ee000 	C:\Windows\system32\shell32.dll
+0x77e40000 - 0x77e95000 	C:\Windows\system32\SHLWAPI.dll
+0x75620000 - 0x757b4000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.6000.16386_none_5d07289e07e1d100\comctl32.dll
+0x6d570000 - 0x6d583000 	C:\Program Files\Java\jre1.6.0\bin\net.dll
+0x775b0000 - 0x775dd000 	C:\Windows\system32\WS2_32.dll
+0x77e20000 - 0x77e26000 	C:\Windows\system32\NSI.dll
+0x75c20000 - 0x75c5b000 	C:\Windows\system32\mswsock.dll
+0x75c80000 - 0x75c86000 	C:\Windows\System32\wship6.dll
+0x6d590000 - 0x6d599000 	C:\Program Files\Java\jre1.6.0\bin\nio.dll
+0x10000000 - 0x100af000 	C:\Users\Emily\AppData\Roaming\Microsoft\Word\STARTUP\EN8Cwyw.WordXP.wll
+0x75470000 - 0x7561a000 	C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.0.6000.16386_none_9ea0ac9ec96e7127\gdiplus.dll
+0x0c710000 - 0x0c812000 	C:\Windows\system32\MFC71U.DLL
+0x7c3a0000 - 0x7c41b000 	C:\Windows\system32\MSVCP71.dll
+0x5d360000 - 0x5d36e000 	C:\Windows\system32\MFC71ENU.DLL
+0x75840000 - 0x758b4000 	C:\Windows\system32\RICHED20.DLL
+0x16000000 - 0x16028000 	C:\Program Files\Trillian\events.dll
+0x73eb0000 - 0x73f36000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.6000.16386_none_87e0cb09378714f1\COMCTL32.dll
+0x768c0000 - 0x76934000 	C:\Windows\system32\comdlg32.dll
+0x6d220000 - 0x6d243000 	C:\Program Files\Java\jre1.6.0\bin\dcpr.dll
+0x759b0000 - 0x759e8000 	C:\Windows\system32\rsaenh.dll
+
+VM Arguments:
+java_command: simse.SimSE
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=.;C:\Program Files\Java\jre1.6.0\lib\ext\QTJava.zip
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\Program Files\Common Files\Roxio Shared\9.0\DLLShared\;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\SSH Communications Security\SSH Secure Shell
+USERNAME=Emily
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 6, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows Vista Build 6000 
+
+CPU:total 2 family 6, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 2094528k(907744k free), swap 4194303k(2752312k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.6.0-b105) for windows-x86, built on Nov 29 2006 00:48:48 by "java_re" with unknown MS VC++:1310
+

@@ -1,0 +1,23 @@
+<html>
+	<head>
+	<title> Test </title>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+	$( document ).ready(function() {
+		$.ajax({
+			'url': "//api.openweathermap.org/data/2.5/weather",
+			'type':'GET',
+			'data': {'q':Boulder,CO'},
+			'success':function(response){
+				console.log(response);
+				alert(response);
+			}
+		});
+	});
+	</script>
+	</head>
+	<body>
+	<p> Hello World </p>
+
+	</body>
+</html>

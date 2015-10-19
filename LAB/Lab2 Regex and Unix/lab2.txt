@@ -1,0 +1,83 @@
+# Diff command
+Old - 	cranberry
+New - 	jackfruit
+	nectarine
+	prickly pair
+>,< point to the file that has deletion or addition of content
+-c is another version of viewing this information
+
+# wc command
+# lines # chars testPasswd.txt
+15 16 692
+
+# Cut command
+remove data from the list 
+cut-d ':' -f1 testPasswd.txt - list of usernames
+cut -d ' ' -f2,4 grades.txt
+
+# Practice Using Pipes
+cut -d ':' -f4 testPasswd.txt | sort -n | uniq
+cut out the groups, sort them by number, remove duplicates
+
+cut -d ':' -f4 testPasswd.txt | sort -n | uniq > solutions1.txt
+save document results
+
+grep ^[msw] testPasswd.txt | cut -d ':' -f1,6
+select only the files starting with m s or w, remove the data associated with file name and directory
+
+cat leetSpeark.txt
+sed 's/[a-zA-Z]//g' leetSpeak.txt
+substitute all character a-z or A-Z with blank (/''/) 
+sed 's/[0-9]//g' leetSpeak.txt
+substitute all the numbers with blank
+sed 's/[0-9]/_/g' filename
+subsititute numbers with underscores
+
+sed -e 's/4/a/g' \-e 's/3/e/g' \-e 's/0/o/g' \-e 's/5/s/g' \-e 's/7/t/g' \-e 's/1/i/g' leetSpeak.txt 
+make multiple edits with -e and \-e to continue 
+produces output: you can lead a horse to water but you can't make it drink
+
+# AWK Command
+cat grades.txt
+awk '{if(NR!=1){for( i = 3 ; i = NF ; i++)j+= $i; print $1,$2,j/(NF-2)*100;j=0} else print $1,$2,"grade"}' grades.txt
+Output: 
+FN LN grade
+Ryan Slaven 80
+Jephthah Eustathios 40
+Andreas Saša 60
+Godofredo Gerard 100
+Edwin Babur 80
+Ahmad Marin 0
+Jett Marko 80
+
+
+
+awk allows you to run code on files
+if passed the header row
+for the grades sections, past First Last name, sum the scores in j
+then print them out, reset j
+then print the first row as the column headers
+
+awk 'BEGIN{s+=3} END{print "Class average for lab 1 is", (s/(NR-1)*100)}' grades.txt
+BEGIN loops through all the rows of column 3
+BEGIN only cares about integer input 
+END stops the loop
+Output: Class average for lab 1 is 42.8571
+
+
+
+egrep [0-9]{3}-[0-9]{3}-[0-9]{4} regex_practice_data.txt | wc -l
+770
+
+egrep 303-441-[0-9]{4} regex_practice_data.txt | wc -l  
+51
+
+grep [@] regex_practice_data.txt | wc -l
+17706
+
+grep [.]gov regex_practice_data.txt | wc -l
+52
+
+grep '^[a-mA-M]*\.[a-zA-Z]*@' regex_practice_data.txt | wc -l
+17
+starts with a-m, any number of them, then period, any char, any number of them, @character
