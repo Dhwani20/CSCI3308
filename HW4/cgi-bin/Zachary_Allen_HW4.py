@@ -1,4 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/python
+
+import cgitb
+cgitb.enable()
 
 print "Content-type: text/html"
 print
@@ -168,6 +171,10 @@ contents = '''
 <path class="border" d="M 211,493 V 548 L 247,593 M 0,425 H 144 L 211,493 H 297 L 350,547 V 593"/>
 <path class="territoryborder" d="M 559.77592,593 L 559.77592,515.6691 L 682.01719,515.6691 L 682.01719,593 M 632.77323,515.6691 L 632.77323,593 M 559.77592,557.52646 L 682.01719,557.52646M 597.89432,556.61302 L 597.89432,593.73613"/>
 </svg>
+
+</body>
+</html>
 '''
 
 print contents
+
