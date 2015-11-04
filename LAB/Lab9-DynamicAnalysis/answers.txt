@@ -1,0 +1,60 @@
+PART 1
+
+1) make - returned successfully
+
+2) ./pi - Segmentation Fault (core dumped)
+	Illegal read and writes in a unallocated memory space
+
+3) gdb pi 
+
+4) Progam Crashes on line 89
+
+5) Exit
+
+6) PROBLEM IS UNALLOCATED MEMORY FOR pt
+	corrected by allocating memory for pt = malloc(sizeof(*pt))
+
+7)
+
+8) Inferior 
+
+9) b zeroDist
+
+10)
+
+11) print other_pt->x $1
+    print other_pt->y $2
+
+12) delete break 1
+    clear zeroDist
+
+PART 2
+
+1) valgrind --leak-check=yes ./pi
+
+2) The code is leaking 31,999,984 bytes of memory in 1,999,999 blocks
+	    possibly 16 more bytes in 1 block
+
+3)Problematic line numbers: zeroDist line 41
+			    main     line 88
+
+4) We need to free the pt and zero_pt memory allocation pointers
+
+6) NO leaks possible
+
+Part 3
+
+1) 13,000,000 iterations causes 1.01 seconds 
+
+2) running with 1000 iterations
+
+3) Looking at kcachegrind.out.4294
+
+4) TOP 5 FUNCTIONS:
+main 		82.65
+zeroDist	51.27
+malloc		21.72
+dist		20.80
+pow		15.03
+
+
