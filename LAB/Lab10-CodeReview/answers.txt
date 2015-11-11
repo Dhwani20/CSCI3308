@@ -1,0 +1,24 @@
+Snippet 1
+- variables aren't self explanatory
+- only allows for one path
+- path is hard coded
+
+Snippet 2
+- Lack of comments describing counters
+- clarify the use of self.path in self.before
+- still not enough comments describing the process
+- some unused functions included - stop, change_interval
+- questions in the comments
+- self.path defined before use*
+
+Snippet 3
+- Defined location for watching of directories
+- finish timing but never start*
+
+3)
+A)Line-21 Hard coding the path line will make this code unscalable on other computers unless the directory is included
+B)Line-39 Don't start the time so, the average calculation will not work
+C)Line-22 Needs new implementation when self.path isn't hardcoded
+
+5) It would be more readable if a brief definition of the variables were provided and their use in the code.
+- 
